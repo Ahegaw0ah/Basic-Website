@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 100%; 
+  position: relative;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.forefront-element {
+    -webkit-transform: translateZ(999px) scale(.7);
+    transform: translateZ(999px) scale(.7);
+    z-index: 1;
+  }
+
+  .base-element {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .background-element {
+    -webkit-transform: translateZ(-999px) scale(1.2);
+    transform: translateZ(-999px) scale(1.2);
+    z-index: 3;
+  }
+
+/* Images used */
+.img1 { background-image: linear-gradient(141deg, #BF57CD 20%, #E54E8D 60%, #F5405D 70% ); filter: blur(10px);}
+.img2 { background-image: url(https://i2.wp.com/www.otaquest.com/wp-content/uploads/2020/05/Screenshot-from-2020-05-20-10-54-52.png?fit=569%2C390&ssl=1); }
+.img3 { background-image: linear-gradient(141deg, #add8e6 20%, #967bb6 60%, #7b7eb6 70% ); }
+.img4 { background-image: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80); }
+
+/* Position text in the middle of the page/image */
+
+</style>
+</head>
+<body>
+
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/pDE1eBPkQBk"></iframe>
+<div class="bg-image img4"></div>
+</body>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+g  {
+    position: -webkit-sticky;
+    position: sticky;
+    position: absolute;
+    font-size: 11vmax;
+    top: 20%;
+    margin-left: 11%;
+    font-family: "Lato", sans-serif;
+
+
+}
+
+</style>
+
+</head>
+<body>
+<div id="texty" class="container">
+<g>DFAB Project :)</g>
+<div class="content">
+  <h4>By Adam Arif Zulfakar</h4>
+  <p><i class="down"></i></p>
+</div>
+</div>
+
+</div>
+</body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div style="font-size:30px;cursor:pointer" onclick="openNav()"></div>
+<div class="container1" onclick="openNav()">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<body>
+<style>
+  a  {
+    font-family: "Lato", sans-serif;
+  }
+  #texty {
+    transition: 0.6s;
+    margin-left: 50%;
+    background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 0px;
+  width: 100%;
+  height:100%;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+
+}
+</style>
+<style>
+  h4  {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  margin-top: 45%;
+  font-size: 2vmax;
+  position: center;
+  bottom: 150px;
+  margin-left: 0%;
+  }
+</style>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+i {
+  border: solid #000000;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 20px;
+  margin-left: 48%;
+  margin-top: 10%;
+  position: absolute;
+  bottom: 80px;
+  z-index: 1;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+</style>
+</head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container1 {
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bar1, .bar2, .bar3 {
+    top: 0;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 5px;
+    transition: 0.4s;
+    mix-blend-mode: difference;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+</style>
+</head>
+
+
+
+<script>
+function myFunction(x) {
+    x.classList.toggle("change");
+
+}
+</script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    ;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 1, 1, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 70px;
+}
+
+.sidenav a {
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 50px;
+    text-align: center;
+    z-index: 2;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 10px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <a href="file:///Users/adamarif/Downloads/DfaabWebsite.html">Home</a>
+  <a href="link">Product Info</a>
+  <a href="link">Production Process</a>
+  <a href="link">Schematics</a>
+  <a href="link">More About My Project</a>
+</div>
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#text {
+    transition: 0.6s;
+    margin-left: 50%;
+    background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10em;
+  width: 100%;
+  height:100%;
+  text-align: center;
+  position: absolute;
+  top: 250%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  z-index: 0;
+
+}
+
+bot {
+  border-color: #ffffff;
+  border-radius: 30px;
+  color: #ffffff;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 45%;
+}
+
+bot:hover {
+  background-color: #ffffff;
+  color: black;
+  transition: 0.6s;
+}
+
+
+
+h3, p, h6, r {
+}
+</style>
+</head>
+<body>
+
+<div id="text">
+  <div class="container">
+    <h3><b>Welcome to My Project.</b></h3> 
+    <v>Feel free to check out the tabs by clicking on the top left button for more information on my project. My website has nice design as I do it for fun:) Scroll down for project demo.</v> 
+    <h6><h6>
+    <r><r>
+  </div>
+</div>
+
+</body>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#tex {
+    transition: 0.6s;
+    margin-left: 50%;
+    background-color: black;
+  color: rgba(250, 250, 250, 1);
+  font-weight: bold;
+  padding: 100px;
+  width: 100%;
+  height:115%;
+  text-align: left;
+  position: absolute;
+  top: 455%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+
+}
+
+/* Green */
+
+r{
+  font-size: 200px;
+}
+
+v{
+  font-size: 2.5em;
+}
+b, h6{
+  font-size: 6.5em;
+}
+</style>
+</head>
+<body>
+
+<div id="tex">
+  <div class="container">
+    <h3><b>Production Process</b></h3> 
+    <v>Click on the button to find out more!</v> 
+   <r></r>
+   <bot href="file:///C:/21%20savage/Project%202%20pg5.html">Learn more</bot> 
+   <r></r>
+  </div>
+</div>
+
+</body>
+
+
+
+</body>
+</html>

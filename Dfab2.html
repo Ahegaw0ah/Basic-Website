@@ -45,13 +45,14 @@ body, html {
   background-size: cover;
   background-attachment: scroll; transition: 0.6s;}
 #img5 { background-image: url('https://i.kym-cdn.com/photos/images/original/002/069/848/829.jpg'); height: 100%; 
-  position: relative;
-    width: 90%;
+  position: sticky;
+  position: -webkit-sticky;
+  width: 90%;
   margin-left: 5%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll; transition:0.6s;}
+  transition:0.6s;}
 #img6 { background-image: url('https://i.kym-cdn.com/photos/images/newsfeed/002/069/850/076.jpg'); height: 100%; 
   position: relative;
     width: 90%;
@@ -475,14 +476,12 @@ function scrollFunction() {
         document.getElementById("img4").style.marginLeft = "5%";
     }
      if (document.body.scrollTop > 3000 || document.documentElement.scrollTop > 3000) {
-        document.getElementById("img5").style.backgroundAttachment = "fixed";
         document.getElementById("img5").style.width = "100%";
         document.getElementById("img5").style.marginLeft = "0%";
         document.getElementById("img6").style.backgroundAttachment = "fixed";
         document.getElementById("img6").style.width = "100%";
         document.getElementById("img6").style.marginLeft = "0%";
     } else {
-        document.getElementById("img5").style.backgroundAttachment = "scroll";
         document.getElementById("img5").style.width = "90%";
         document.getElementById("img5").style.marginLeft = "5%";
         document.getElementById("img6").style.backgroundAttachment = "scroll";

@@ -113,8 +113,7 @@ body, html {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 g  {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     font-size: 34px;
     margin-left: 0%;
@@ -131,7 +130,7 @@ g  {
 
 </head>
 <body>
-<g class="sticky" class="press" href='index.html'>Dfab Project</g>
+<g class="sticky" id="press" href='index.html'>Dfab Project</g>
 
 </body>
 <style>
@@ -267,7 +266,7 @@ body {
     height: 100%;
     width: 0px;
     position: fixed;
-    z-index: 3;
+    z-index: 10;
     top: 0;
     left: 0;
     background-color: rgba(20, 20, 20, 1);

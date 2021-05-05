@@ -211,10 +211,12 @@ function myFunction(x) {
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("container1").style.opacity = "0";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("container1").style.opacity = "1";
 }
 </script>
 
@@ -231,11 +233,11 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgba(1, 1, 1, 0.9);
+    background-color: rgba(1, 1, 1, 1);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 70px;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 .sidenav a {

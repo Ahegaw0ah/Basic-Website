@@ -213,7 +213,7 @@ body {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .container1 {
-    position: sticky;
+    position: fixed;
     margin-top: 0%;
     display: inline-block;
     cursor: pointer;
@@ -228,7 +228,7 @@ body {
     top: 0;
     width: 35px;
     height: 5px;
-    background-color: #000000;
+    background-color: #ffffff;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -366,6 +366,7 @@ bot:hover {
 
 #e1 {
   color:rgba(0, 0, 0, 0);
+  transition: 0.3s;
 }
 
 
@@ -452,7 +453,7 @@ d, h6{
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 1600 || document.documentElement.scrollTop > 1600) {
+    if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
         document.getElementById("tex").style.color = "rgba(250, 250, 250, 1)";
         document.getElementById("img3").style.filter= "opacity(100%)";
         document.getElementById("img4").style.filter= "opacity(100%)";
@@ -464,26 +465,22 @@ function scrollFunction() {
     if (document.body.scrollTop > 1420 || document.documentElement.scrollTop > 1420) {
         document.getElementById("img3").style.width = "100%";
         document.getElementById("img3").style.marginLeft = "0%";
-        document.getElementById("img4").style.backgroundAttachment = "fixed";
         document.getElementById("img4").style.width = "100%";
         document.getElementById("img4").style.marginLeft = "0%";
     } else {
         document.getElementById("img3").style.width = "90%";
         document.getElementById("img3").style.marginLeft = "5%";
-        document.getElementById("img4").style.backgroundAttachment = "scroll";
         document.getElementById("img4").style.width = "90%";
         document.getElementById("img4").style.marginLeft = "5%";
     }
      if (document.body.scrollTop > 3000 || document.documentElement.scrollTop > 3000) {
         document.getElementById("img5").style.width = "100%";
         document.getElementById("img5").style.marginLeft = "0%";
-        document.getElementById("img6").style.backgroundAttachment = "fixed";
         document.getElementById("img6").style.width = "100%";
         document.getElementById("img6").style.marginLeft = "0%";
     } else {
         document.getElementById("img5").style.width = "90%";
         document.getElementById("img5").style.marginLeft = "5%";
-        document.getElementById("img6").style.backgroundAttachment = "scroll";
         document.getElementById("img6").style.width = "90%";
         document.getElementById("img6").style.marginLeft = "5%";
     }

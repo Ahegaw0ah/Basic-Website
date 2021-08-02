@@ -51,11 +51,12 @@ body, html {
     position: fixed;
     position: center;
     font-size: 3em;
-    top: 1%;
-    margin-left:55%;
+    top: 0%;
+    margin-left:45%;
     font-family: "Noto Sans", sans-serif;
     color: #333333;
-    z-index: 9;
+    z-index: 9
+    opacity: 0;
   }
 
 /* Images used */
@@ -68,6 +69,17 @@ body, html {
 
 </style>
 </head>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("bar").style.opacity = "1";
+  } else {
+    document.getElementById("bar").style.opacity = "0";
+  }
+}
+  </script>
 <body>
 <header>
   <div class="bar">

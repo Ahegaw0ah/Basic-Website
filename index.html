@@ -49,6 +49,7 @@ body, html {
   }
   .bar {
     position: sticky;
+    position: -webkit-sticky;
     position: center;
     font-size: 3em;
     top: 0%;
@@ -56,7 +57,7 @@ body, html {
     font-family: "Noto Sans", sans-serif;
     color: #333333;
     z-index: 8;
-    opacity: 1;
+    opacity: 0;
     transition: 0.4s;
   }
 
@@ -72,14 +73,14 @@ body, html {
 </head>
   <script>
     window.onscroll = function() {myFunction()};
-/*
+
 function myFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     document.getElementById("bar").style.opacity = "1";
   } else {
     document.getElementById("bar").style.opacity = "0";
   }
-}*/
+}
   </script>
 <body>
 <header>

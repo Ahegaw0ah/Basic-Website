@@ -55,8 +55,8 @@ body, html {
     margin-left:45%;
     font-family: "Noto Sans", sans-serif;
     color: #333333;
-    z-index: 9;
-    opacity: 0;
+    z-index: 8;
+    opacity: 1;
     transition: 0.4s;
   }
 
@@ -72,14 +72,14 @@ body, html {
 </head>
   <script>
     window.onscroll = function() {myFunction()};
-
+/*
 function myFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     document.getElementById("bar").style.opacity = "1";
   } else {
     document.getElementById("bar").style.opacity = "0";
   }
-}
+}*/
   </script>
 <body>
 <header>
@@ -168,6 +168,7 @@ cp {
   top: 50%;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
+  z-index: 9;
 
 }
 </style>

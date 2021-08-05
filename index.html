@@ -48,7 +48,7 @@ body, html {
     z-index: 3;
   }
   .bar {
-    position: fixed;
+    position: sticky;
     position: center;
     top: 0;
     font-size: 34px;
@@ -57,10 +57,9 @@ body, html {
     background-color: white;
     font-family: 'Noto Sans' , sans-serif;
     z-index: 4;
-    opacity: 1;
+    opacity: 0;
     transition: 0.4s;
     width: 100%;
-    height: 10%;
   }
   .sticky {
   position: fixed;
@@ -77,18 +76,17 @@ body, html {
 
 </style>
 </head>
- <script>/*
+ <script>
 $(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
+  var scrollTop = $(this).scrollTop();
 
-        $('.bar').css({
-        opacity: function() {
-            var elementHeight = $(this).height(),
-            opacity = ((elementHeight - scrollTop) / elementHeight);
-            return opacity;
-        }
-    });
-});*/
+  $('.bar').css({
+    opacity: function() {
+      var elementHeight = $(this).height();
+      return 1 - (elementHeight - scrollTop) / elementHeight;
+    }
+  });
+});
   </script> 
 <body>
 <header>
@@ -116,7 +114,7 @@ g  {
     position: sticky;
     position: absolute;
     font-size: 6vmax;
-    top: 60%;
+    top: 30%;
     margin-left: 35%;
     font-family: "Noto Sans", sans-serif;
   }

@@ -268,12 +268,12 @@ function myFunction(x) {
 </script>
 <script>
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.left = "250px";
     document.getElementById("container1:hover").style.opacity = "0";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.left = "-250px";
     document.getElementById("container1:hover").style.opacity = "1";
 }
 </script>
@@ -286,11 +286,11 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 250;
     position: fixed;
-    z-index: 1;
+    z-index: 4;
     top: 0;
-    left: 0;
+    left: -250px;
     background-color: rgba(1, 1, 1, 1);
     overflow-x: hidden;
     transition: 0.5s;
@@ -305,7 +305,7 @@ body {
     color: #818181;
     display: block;
     transition: 0.3s;
-    z-index:7;
+    z-index:4;
 }
 
 .sidenav a:hover {
@@ -318,7 +318,7 @@ body {
     right: 10px;
     font-size: 50px;
     text-align: center;
-    z-index: 2;
+    z-index: 4;
 }
 
 @media screen and (max-height: 450px) {

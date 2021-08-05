@@ -48,26 +48,23 @@ body, html {
     z-index: 3;
   }
   .bar {
-    position: sticky;
     position: center;
+    position: fixed;
     top: 0;
     font-size: 34px;
     margin-left: 0%;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     font-family: 'Noto Sans' , sans-serif;
     z-index: 4;
-    opacity: 0;
     transition: 0.4s;
     width: 100%;
   }
   .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  position: sticky;
   }
 /* Images used */
-.img1 { background-image: linear-gradient(141deg, #BF57CD 30%, #E54E8D 30%, #F5405D 30% ); filter: blur(15px);}
+.img1 { background-image: linear-gradient(141deg, #AAEECC, #AAEEEE, #EEAACC ); height: 100%; position: relative; background-position: center; background-repeat: no-repeat; background-size: cover; }
 .img2 { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/-Insert_image_here-.svg/1280px--Insert_image_here-.svg.png'); }
 .img3 { background-image: linear-gradient(141deg, #add8e6 20%, #967bb6 60%, #7b7eb6 70% ); }
 .img4 { background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/-Insert_image_here-.svg/1280px--Insert_image_here-.svg.png); }
@@ -77,24 +74,26 @@ body, html {
 </style>
 </head>
  <script>
-$(window).scroll(function() {
-  var scrollTop = $(this).scrollTop();
+function EasyPeasyParallax() {
+    scrollPos = $(document).scrollTop();
+            var opacityVal = 0.5+(Math.min(scrollPos/100,1));
+            var rgbaCol = 'rgba(255, 255, 255, ' + opacityVal + ')'
+            $('.bar').css('background-color', rgbaCol);
+};
 
-  $('.bar').css({
-    opacity: function() {
-      var elementHeight = $(this).height();
-      return 1 - (elementHeight - scrollTop) / elementHeight;
-    }
-  });
+$(function(){
+    $(window).scroll(function() {
+        EasyPeasyParallax();
+    });
 });
   </script> 
 <body>
 <header>
-  <div class="bar" class="sticky">
+  <div class="bar">
     <h10>gomi.</h10>
   </div>
   </header>
-<div class="bg-image img1"></div>
+<div class="img1"></div>
 <div class="bg-image img2"></div>
 <div class="bg-image img3"></div>
 <iframe width="100%" height="100%" src="https://i.ytimg.com/vi/4JZGSlgdoyQ/maxresdefault.jpg"></iframe>
@@ -113,9 +112,9 @@ g  {
     position: -webkit-sticky;
     position: sticky;
     position: absolute;
-    font-size: 6vmax;
-    top: 30%;
-    margin-left: 35%;
+    font-size: 4vmax;
+    top: 20%;
+    margin-left: 50%;
     font-family: "Noto Sans", sans-serif;
   }
  .copyRight {
@@ -124,6 +123,7 @@ g  {
   }
 h10 {
   color: #303030;
+  z-index: 4;
 }
 cp {
   font-size: 1.5em;
@@ -140,9 +140,12 @@ cp {
 </head>
 <body>
 <div id="texty" class="container">
-<g>The Smart Bin.</g>
+<g>The Trash Bin</g>
+ <g style="margin-top: 5%; margin-left: 58%; font-size: 3vmax;">with Brains.</g>
 <div class="content">
-  <h4>Discover what's great about a trash bin with brains.</h4>
+  <h4>discover what's so great</h4>
+    <h4 style="margin-top: -2%; margin-left: 60%;">about a trash collector</h4>
+     <h4 style="margin-top: -2%; margin-left: 60%;">with brains.</h4>
   <p><i class="down"></i></p>
 </div>
 </div>
@@ -166,7 +169,7 @@ cp {
   }
   #texty {
     transition: 0.6s;
-    margin-left: 50%;
+    margin-left: 0%;
     background-color: transparent;
   color: black;
   font-weight: bold;
@@ -175,7 +178,7 @@ cp {
   height:100%;
   text-align: left;
   position: absolute;
-  top: 50%;
+  top: 0%;
   z-index: 3;
 
 }
@@ -185,10 +188,10 @@ cp {
   font-family: "Lato", sans-serif;
   text-align: center;
   margin-top: 20%;
-  font-size: 4vmax;
+  font-size: 2vmax;
   position: center;
   bottom: 150px;
-  margin-left: 40%;
+  margin-left: 50%;
   }
 </style>
 

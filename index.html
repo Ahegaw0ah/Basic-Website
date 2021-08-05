@@ -54,8 +54,8 @@ body, html {
     font-size: 34px;
     margin-left: 0%;
     text-align: center;
-    background-color: #202020;
-    color: #f1f1f1;
+    background-color: white;
+    color: #303030;
     box-shadow: 0 15px 30px 0 rgba( 0, 0, 0, 0.7);
     font-family: 'Noto Sans' , sans-serif;
     z-index: 8;
@@ -78,15 +78,17 @@ body, html {
 </style>
 </head>
  <script>/*
-    window.onscroll = function() {myFunction()};
+$(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
 
-function myFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    document.getElementById("bar").style.opacity = "1";
-  } else {
-    document.getElementById("bar").style.opacity = "0";
-  }
-}*/
+        $('.bar').css({
+        opacity: function() {
+            var elementHeight = $(this).height(),
+            opacity = ((elementHeight - scrollTop) / elementHeight);
+            return opacity;
+        }
+    });
+});*/
   </script> 
 <body>
 <header>
@@ -113,8 +115,8 @@ g  {
     position: -webkit-sticky;
     position: sticky;
     position: absolute;
-    font-size: 11vmax;
-    top: 20%;
+    font-size: 6vmax;
+    top: 60%;
     margin-left: 35%;
     font-family: "Noto Sans", sans-serif;
   }
@@ -125,7 +127,7 @@ g  {
 cp {
   font-size: 1.5em;
   font-family: "Lato", sans-serif;
-  color: black;
+  color: rgba(0,0,0,0.6);
   text-align: center;
   margin-left: 50%;
   }
@@ -137,9 +139,9 @@ cp {
 </head>
 <body>
 <div id="texty" class="container">
-<g>gomi.</g>
+<g>The Smart Bin.</g>
 <div class="content">
-  <h4>By Adam Arif Zulfakar</h4>
+  <h4>Discover what's great about a trash bin with brains.</h4>
   <p><i class="down"></i></p>
 </div>
 </div>
@@ -183,11 +185,11 @@ cp {
   h4  {
   font-family: "Lato", sans-serif;
   text-align: center;
-  margin-top: 45%;
-  font-size: 2vmax;
+  margin-top: 20%;
+  font-size: 4vmax;
   position: center;
   bottom: 150px;
-  margin-left: 0%;
+  margin-left: 40%;
   }
 </style>
 

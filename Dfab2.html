@@ -227,23 +227,29 @@ body {
 <style>
 .container1 {
     position: fixed;
-    margin-top: 0%;
+    top: 2px;
     display: inline-block;
     cursor: pointer;
-    background-color: #202020;
     z-index: 5;
-    margin-left: 1%;
+    opacity:0.5;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: 0.4s;
 }
+ 
+.container1:hover{
+    opacity:1;
+  }
 
 .bar1, .bar2, .bar3 {
-  position: -webkit-sticky;
-    position: sticky;
     top: 0;
     width: 35px;
     height: 5px;
-    background-color: #ffffff;
-    margin: 6px 0;
+    background-color: black;
+    margin: 6px 5px;
     transition: 0.4s;
+    z-index: 6;
+    
 }
 
 .change .bar1 {
@@ -261,33 +267,43 @@ body {
 </head>
 
 
+
 <script>
 function myFunction(x) {
     x.classList.toggle("change");
 
 }
 </script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.left = "0px";
+    document.getElementById("container1:hover").style.opacity = "0";
+}
 
+function closeNav() {
+    document.getElementById("mySidenav").style.left = "-300px";
+    document.getElementById("container1:hover").style.opacity = "1";
+}
+</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-    font-family: 'Noto Sans' , sans-serif;
+    ;
 }
 
 .sidenav {
     height: 100%;
-    width: 0px;
+    width: 250;
     position: fixed;
-    z-index: 10;
+    z-index: 6;
     top: 0;
-    left: 0;
-    background-color: rgba(20, 20, 20, 1);
-    box-shadow:  0 10px 20px 0;
+    left: -300px;
+    background-color: rgba(1, 1, 1, 1);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 70px;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 .sidenav a {
@@ -296,7 +312,8 @@ body {
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.6s;
+    transition: 0.3s;
+    z-index:4;
 }
 
 .sidenav a:hover {
@@ -309,6 +326,7 @@ body {
     right: 10px;
     font-size: 50px;
     text-align: center;
+    z-index: 4;
 }
 
 @media screen and (max-height: 450px) {
@@ -325,8 +343,9 @@ body {
   <a href="Dfab2.html">Product Info</a>
   <a href="link">Production Process</a>
   <a href="link">Schematics</a>
-  <a href="link">More About My Project</a>
+  <a href="link">More About gomi.</a>
 </div>
+
 
 <script>
 function openNav() {

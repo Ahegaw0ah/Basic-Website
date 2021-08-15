@@ -47,19 +47,26 @@ body, html {
     transform: translateZ(-999px) scale(1.2);
     z-index: 3;
   }
-  .bar {
+  #bar {
     position: center;
     position: fixed;
     top: 0;
-    font-size: 34px;
+    font-size: 2em;
     margin-left: 0%;
     text-align: center;
     background-color: rgba(255, 255, 255, 0);
     font-family: 'Noto Sans' , sans-serif;
     z-index: 4;
-    transition: 0.4s;
     width: 100%;
+    transition: 0.5s;
   }
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
   .sticky {
   position: sticky;
   }
@@ -67,36 +74,62 @@ body, html {
 .img1 { background-image: linear-gradient(141deg, #AAEECC, #AAEEEE, #EEAACC ); height: 100%; position: relative; background-position: center; background-repeat: no-repeat; background-size: cover; }
 .img2 { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/-Insert_image_here-.svg/1280px--Insert_image_here-.svg.png'); }
 .img3 { background-image: linear-gradient(141deg, #add8e6 20%, #967bb6 60%, #7b7eb6 70% ); }
-.img4 { background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/-Insert_image_here-.svg/1280px--Insert_image_here-.svg.png); }
+.img4 { background-image: linear-gradient(141deg, #add8e6 20%, #967bb6 60%, #7b7eb6 70% ); }
 
 /* Position text in the middle of the page/image */
 
 </style>
-</head>
- <script>
-function EasyPeasyParallax() {
-    scrollPos = $(document).scrollTop();
-            var opacityVal = 0.5+(Math.min(scrollPos/100,1));
-            var rgbaCol = 'rgba(255, 255, 255, ' + opacityVal + ')'
-            $('.bar').css('background-color', rgbaCol);
-};
+</head> 
+<script>
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
 
-$(function(){
-    $(window).scroll(function() {
-        EasyPeasyParallax();
-    });
-});
-  </script> 
+var myVideo = document.getElementById("img3"); 
+
+function scrollFunction() {
+    if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0) {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 0)";
+    }
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+    } else {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 0)";
+    }
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+    } else {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+    }
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+    } else {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+    }
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 1)";
+    } else {
+        document.getElementById("bar").style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+    }
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        myVideo.play();
+    } else {
+        myVideo.pause();
+    }
+  }
+</script>
 <body>
 <header>
-  <div class="bar">
+  <div id="bar">
     <h10>gomi.</h10>
   </div>
   </header>
 <div class="img1"></div>
-<div class="bg-image img2"></div>
+<div class="bg-image img2">
+  <video>
+  <source src="https://cdn.discordapp.com/attachments/697025406238195713/857830255052718120/9convert.com_-_Aiura_OP_Trim.mp4" type="video/mp4">
+</video>
+</div>
 <div class="bg-image img3"></div>
-<iframe width="100%" height="100%" src="https://i.ytimg.com/vi/4JZGSlgdoyQ/maxresdefault.jpg"></iframe>
 <div class="bg-image img4"></div>
 </body>
   <footer>
@@ -289,7 +322,7 @@ body {
     height: 100%;
     width: 250;
     position: fixed;
-    z-index: 4;
+    z-index: 6;
     top: 0;
     left: -300px;
     background-color: rgba(1, 1, 1, 1);
@@ -332,11 +365,11 @@ body {
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   <a href="file:///Users/adamarif/Downloads/DfaabWebsite.html">Home</a>
+   <a href="index.html">Home</a>
   <a href="Dfab2.html">Product Info</a>
   <a href="link">Production Process</a>
   <a href="link">Schematics</a>
-  <a href="link">More About My Project</a>
+  <a href="link">More About gomi.</a>
 </div>
 
 
@@ -390,8 +423,8 @@ h3, p, h6, r {
 
 <div id="text">
   <div class="container">
-    <h3><b>Welcome to My Project.</b></h3> 
-    <v>Feel free to check out the tabs by clicking on the top left button for more information on my project. My website has nice design as I do it for fun:) Scroll down for project demo.</v> 
+    <h3><b>What's a gomi.?</b></h3> 
+    <v>gomi. is a Smart Trash Bin that is so smart, you dont even need to think about touching it to open at all. Designed and engineered by me myself, Adam, this bin will be one of the most advanced trash bin you may have ever seen. Quite an oxymoron if you ask me.</v> 
     <h6><h6>
     <r><r>
   </div>
@@ -412,7 +445,7 @@ h3, p, h6, r {
   height:115%;
   text-align: left;
   position: absolute;
-  top: 455%;
+  top: 355%;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
 
@@ -428,7 +461,7 @@ v{
   font-size: 2.5em;
 }
 b, h6{
-  font-size: 6.5em;
+  font-size: 5em;
 }
 </style>
 </head>
@@ -436,10 +469,10 @@ b, h6{
 
 <div id="tex">
   <div class="container">
-    <h3><b>Production Process</b></h3> 
-    <v>Click on the button to find out more!</v> 
+    <h3><b>gomi.</b></h3> 
+    <v>Learn more about gomi. here! Just click on the button. Don't be shy!</v> 
    <r></r>
-   <bot href="file:///C:/21%20savage/Project%202%20pg5.html">Learn more</bot> 
+   <bot href="Dfab2.html">Learn more</bot> 
    <r></r>
   </div>
 </div>

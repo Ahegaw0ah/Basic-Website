@@ -227,29 +227,23 @@ body {
 <style>
 .container1 {
     position: fixed;
-    top: 2px;
+    margin-top: 0%;
     display: inline-block;
     cursor: pointer;
+    background-color: #202020;
     z-index: 5;
-    opacity:0.5;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    transition: 0.4s;
+    margin-left: 1%;
 }
- 
-.container1:hover{
-    opacity:1;
-  }
 
 .bar1, .bar2, .bar3 {
+  position: -webkit-sticky;
+    position: sticky;
     top: 0;
     width: 35px;
     height: 5px;
-    background-color: black;
-    margin: 6px 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
     transition: 0.4s;
-    z-index: 6;
-    
 }
 
 .change .bar1 {
@@ -267,34 +261,23 @@ body {
 </head>
 
 
-
 <script>
 function myFunction(x) {
     x.classList.toggle("change");
 
 }
 </script>
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.left = "0px";
-    document.getElementById("container1:hover").style.opacity = "0";
-}
 
-function closeNav() {
-    document.getElementById("mySidenav").style.left = "-300px";
-    document.getElementById("container1:hover").style.opacity = "1";
-}
-</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-    ;
+    font-family: 'Noto Sans' , sans-serif;
 }
 
 .sidenav {
     height: 100%;
-    width: 250;
+    width: 250px;
     position: fixed;
     z-index: 6;
     top: 0;
@@ -329,6 +312,7 @@ body {
     z-index: 4;
 }
 
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 10px;}
   .sidenav a {font-size: 18px;}
@@ -343,19 +327,18 @@ body {
   <a href="Dfab2.html">Product Info</a>
   <a href="link">Production Process</a>
   <a href="link">Schematics</a>
-  <a href="link">More About gomi.</a>
+  <a href="link">More About My Project</a>
 </div>
-
 
 <script>
 function openNav() {
-    document.getElementById("mySidenav").style.marginLeft = "0%";
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.left = "0px";
+    document.getElementById("container1:hover").style.opacity = "0";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.marginLeft = "-50%";
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.left = "-300px";
+    document.getElementById("container1:hover").style.opacity = "1";
 }
 </script>
 
@@ -415,7 +398,7 @@ h3{
 }
 h4{
   font-size: 500%;
-  margin-top: 13%;
+  margin-top: 9%;
   color: black;
 }
 h5{
